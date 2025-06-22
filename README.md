@@ -65,7 +65,7 @@ Para começar a explorar ou contribuir com os laboratórios, siga os passos abai
 ### Clonando o Repositório
 
 ```bash
-git clone [https://github.com/SEU_USUARIO/laboratorio_de_ia.git](https://github.com/SEU_USUARIO/laboratorio_de_ia.git)
+git clone [https://github.com/kallebelins/ai-labs.git](https://github.com/kallebelins/ai-labs.git)
 cd laboratorio_de_ia
 ```
 
