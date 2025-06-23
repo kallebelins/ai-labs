@@ -27,28 +27,30 @@ Essa abordagem garante **isolamento total** entre os experimentos, prevenindo co
 A estrutura do repositório foi desenhada para ser intuitiva e escalável.
 
 ```sh
-laboratorio_de_ia/
+ai-labs/
 │
-├── .gitignore              # Configurações globais de arquivos a serem ignorados
 ├── README.md               # Este documento que você está lendo
+├── LICENSE                 # Licença do projeto
 │
 └── labs/                   # O coração do projeto, contendo todos os laboratórios
     │
-    ├── 01_nome_do_lab/     # Exemplo de um laboratório autocontido
-    │   ├── README.md         # Documentação específica deste laboratório
-    │   ├── requirements.txt  # Dependências Python APENAS para este laboratório
-    │   ├── src/              # Código fonte do laboratório
-    │   ├── data/             # Dados de entrada
-    │   ├── notebooks/        # Notebooks para exploração e prototipagem
-    │   ├── tests/            # Testes para o código em `src/`
-    │   └── results/          # Saídas geradas (gráficos, relatórios, métricas)
+    ├── 01_chatbot_langchain/   # Exemplo de um laboratório autocontido
+    │   ├── README.md           # Documentação específica deste laboratório
+    │   ├── requirements.txt    # Dependências Python APENAS para este laboratório
+    │   ├── src/                # Código fonte do laboratório
+    │   ├── scripts/            # Scripts de execução e utilitários
+    │   ├── input/              # Dados de entrada ou arquivos de teste
+    │   ├── logs/               # Logs gerados durante as execuções
+    │   ├── metrics/            # Relatórios e métricas
+    │   └── contents/           # Outros conteúdos (imagens, artigos, etc)
     │
-    ├── 02_outro_lab/       # Cada laboratório segue a mesma estrutura interna
+    ├── 02_nome_do_lab/        # Cada laboratório segue a mesma estrutura interna
     │   └── ...
     │
-    └── shared_utilities/   # Um pacote Python com código reutilizável entre os labs
-        └── ...
-````
+    └── ...                    # Demais laboratórios numerados
+```
+
+Cada laboratório é autocontido, com seu próprio ambiente virtual, dependências e organização interna. Não há uma pasta 'shared_utilities' global, mas sim laboratórios independentes, cada um com seu escopo e código isolado.
 
 -----
 
@@ -116,13 +118,70 @@ Cada laboratório possui seu próprio ambiente para garantir o isolamento.
 
 ### 2\. Criando um Novo Laboratório
 
-Quer iniciar um novo estudo? Siga este checklist:
+Quer iniciar um novo estudo? Siga este checklist detalhado:
 
-  - [ ] Crie uma nova pasta dentro de `labs/`. Use um nome descritivo e, se desejar, um prefixo numérico (ex: `03_analise_multimodal_de_videos`).
-  - [ ] Dentro da nova pasta, crie a estrutura de subpastas: `src/`, `data/`, `notebooks/`, `tests/`, `results/`.
-  - [ ] Crie um arquivo `requirements.txt` listando as dependências do seu novo projeto.
-  - [ ] Crie um arquivo `README.md` explicando o objetivo do seu laboratório, como configurá-lo e quais resultados são esperados.
-  - [ ] Comece a desenvolver\!
+1. **Crie a pasta do laboratório**
+   - No diretório `labs/`, crie uma nova pasta com um nome descritivo e, preferencialmente, um prefixo numérico sequencial (ex: `03_analise_multimodal_de_videos`).
+   - Exemplo:
+     ```bash
+     mkdir labs/03_analise_multimodal_de_videos
+     cd labs/03_analise_multimodal_de_videos
+     ```
+
+2. **Crie a estrutura de subpastas**
+   - Recomenda-se a seguinte estrutura mínima:
+     - `src/` — Código-fonte principal do laboratório
+     - `scripts/` — Scripts utilitários, de execução ou automação
+     - `input/` — Dados de entrada, arquivos de teste ou exemplos
+     - `logs/` — Logs gerados durante execuções
+     - `metrics/` — Relatórios, métricas e resultados
+     - `contents/` — Imagens, artigos, documentação extra, etc.
+   - Exemplo:
+     ```bash
+     mkdir src scripts input logs metrics contents
+     ```
+
+3. **Crie o arquivo de dependências**
+   - Crie um arquivo `requirements.txt` na raiz do laboratório, listando todas as bibliotecas necessárias para o funcionamento do seu projeto.
+   - Exemplo:
+     ```
+     langchain
+     openai
+     pandas
+     ```
+
+4. **Crie a documentação do laboratório**
+   - Crie um arquivo `README.md` explicando:
+     - O objetivo do laboratório
+     - Como configurar o ambiente e instalar dependências
+     - Como executar scripts e testes
+     - Quais resultados são esperados
+     - Qualquer configuração especial (ex: variáveis de ambiente, chaves de API)
+   - Inclua exemplos de uso e instruções para reprodutibilidade.
+
+5. **(Opcional) Adicione arquivos de dados ou exemplos**
+   - Se necessário, adicione arquivos de entrada em `input/` ou exemplos de logs em `logs/`.
+
+6. **(Opcional) Adicione um arquivo `.gitignore**
+   - Para ignorar arquivos temporários, ambientes virtuais, dados sensíveis, etc.
+
+7. **(Opcional) Crie um ambiente virtual local**
+   - Para garantir o isolamento das dependências:
+     ```bash
+     python -m venv .venv
+     # Ative o ambiente conforme seu sistema operacional
+     ```
+
+8. **Implemente o código e scripts iniciais**
+   - Comece a desenvolver seu experimento, script ou solução dentro da estrutura criada.
+
+9. **Teste a reprodutibilidade**
+   - Siga o passo a passo do seu próprio README para garantir que qualquer pessoa consiga rodar o laboratório do zero.
+
+10. **Faça commits frequentes**
+    - Versione seu progresso e documente mudanças relevantes.
+
+Se precisar de exemplos de README ou arquivos de configuração, consulte os laboratórios já existentes no repositório!
 
 -----
 

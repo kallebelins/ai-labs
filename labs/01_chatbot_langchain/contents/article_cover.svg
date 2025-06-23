@@ -1,0 +1,111 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:0.95" />
+    </linearGradient>
+    
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="50" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="1100" cy="150" r="80" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="150" cy="500" r="60" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="1050" cy="450" r="40" fill="rgba(255,255,255,0.1)"/>
+  
+  <!-- Main content card -->
+  <rect x="100" y="80" width="1000" height="470" rx="20" fill="url(#cardGradient)" filter="url(#shadow)"/>
+  
+  <!-- Title -->
+  <text x="600" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#2d3748">
+    Desenvolvendo um Chatbot Inteligente
+  </text>
+  <text x="600" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#2d3748">
+    com LangChain
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#4a5568">
+    Resolvendo um Problema Real com Validação por Métricas
+  </text>
+  
+  <!-- Icons and visual elements -->
+  
+  <!-- AI Brain icon -->
+  <g transform="translate(200, 350)">
+    <circle cx="40" cy="40" r="35" fill="#667eea" opacity="0.9"/>
+    <path d="M40 15 Q50 25 50 40 Q50 55 40 65 Q30 55 30 40 Q30 25 40 15" fill="white"/>
+    <circle cx="35" cy="35" r="3" fill="#667eea"/>
+    <circle cx="45" cy="35" r="3" fill="#667eea"/>
+    <circle cx="40" cy="45" r="2" fill="#667eea"/>
+  </g>
+  
+  <!-- Code brackets -->
+  <g transform="translate(400, 350)">
+    <rect x="0" y="0" width="80" height="80" rx="10" fill="#764ba2" opacity="0.9"/>
+    <text x="20" y="30" font-family="monospace" font-size="24" fill="white">{</text>
+    <text x="60" y="30" font-family="monospace" font-size="24" fill="white">}</text>
+    <text x="40" y="55" font-family="monospace" font-size="12" fill="white">AI</text>
+  </g>
+  
+  <!-- Metrics chart -->
+  <g transform="translate(600, 350)">
+    <rect x="0" y="0" width="80" height="80" rx="10" fill="#48bb78" opacity="0.9"/>
+    <rect x="15" y="50" width="10" height="20" fill="white"/>
+    <rect x="30" y="40" width="10" height="30" fill="white"/>
+    <rect x="45" y="30" width="10" height="40" fill="white"/>
+    <rect x="60" y="35" width="10" height="35" fill="white"/>
+    <text x="40" y="25" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">📊</text>
+  </g>
+  
+  <!-- Validation checkmark -->
+  <g transform="translate(800, 350)">
+    <rect x="0" y="0" width="80" height="80" rx="10" fill="#ed8936" opacity="0.9"/>
+    <path d="M25 40 L35 50 L55 30" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="40" y="25" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">✅</text>
+  </g>
+  
+  <!-- Labels -->
+  <text x="240" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2d3748">
+    IA Inteligente
+  </text>
+  <text x="440" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2d3748">
+    Código Modular
+  </text>
+  <text x="640" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2d3748">
+    Métricas
+  </text>
+  <text x="840" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2d3748">
+    Validação
+  </text>
+  
+  <!-- Bottom accent -->
+  <rect x="100" y="520" width="1000" height="4" fill="#667eea"/>
+  
+  <!-- Decorative code lines -->
+  <g opacity="0.1">
+    <text x="150" y="550" font-family="monospace" font-size="12" fill="#2d3748">from src.core.chatbot import ChatbotEngine</text>
+    <text x="150" y="570" font-family="monospace" font-size="12" fill="#2d3748">metrics = extract_metrics_from_logs(logs)</text>
+    <text x="150" y="590" font-family="monospace" font-size="12" fill="#2d3748">validation_result = validate_solution(criteria)</text>
+  </g>
+  
+  <!-- Floating elements -->
+  <g opacity="0.6">
+    <circle cx="950" cy="200" r="8" fill="#667eea"/>
+    <circle cx="980" cy="220" r="6" fill="#764ba2"/>
+    <circle cx="920" cy="240" r="10" fill="#48bb78"/>
+    <circle cx="960" cy="180" r="5" fill="#ed8936"/>
+  </g>
+</svg> 
