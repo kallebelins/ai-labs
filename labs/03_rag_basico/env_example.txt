@@ -1,0 +1,28 @@
+# Configurações da OpenAI
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Configurações do modelo
+MODEL_NAME=gpt-3.5-turbo
+MAX_TOKENS=1000
+TEMPERATURE=0.7
+
+# Configurações de performance
+MAX_RESPONSE_TIME=5.0
+MIN_SUCCESS_RATE=90.0
+
+# Configurações específicas de RAG
+CHUNK_SIZE=1000
+CHUNK_OVERLAP=200
+VECTORSTORE_PERSISTENCE_PATH=data/chroma_db
+VECTORSTORE_SEARCH_K=3
+COLLECTION_NAME=rag_documents
+
+# Configurações de métricas RAG
+CONTEXT_RECALL_THRESHOLD=0.7
+PRECISION_THRESHOLD=0.8
+
+# Configurações de logging
+LOG_LEVEL=INFO
+
+# Modo de teste (true para usar documentos simulados)
+TEST_MODE=false 
