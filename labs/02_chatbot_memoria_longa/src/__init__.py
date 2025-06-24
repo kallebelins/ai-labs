@@ -1,0 +1,1 @@
+# Módulo src para o laboratório de chatbot com memória de longo prazo 

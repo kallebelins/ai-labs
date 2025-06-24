@@ -1,0 +1,1 @@
+# Módulo utils para o laboratório de chatbot com memória de longo prazo 

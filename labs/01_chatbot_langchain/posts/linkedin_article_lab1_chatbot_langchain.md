@@ -174,4 +174,31 @@ Este laboratório demonstra como resolver um problema real de forma profissional
 
 **#InteligênciaArtificial #LangChain #OpenAI #DesenvolvimentoSoftware #ArquiteturaDeSoftware #Métricas #Validação #TestesAutomatizados #Chatbot #Python**
 
-*Este laboratório demonstra como resolver problemas reais com IA de forma profissional, utilizando métricas rigorosas para validar que a solução atende aos requisitos estabelecidos.* 
+*Este laboratório demonstra como resolver problemas reais com IA de forma profissional, utilizando métricas rigorosas para validar que a solução atende aos requisitos estabelecidos.*
+
+---
+
+## 🔗 Acesso ao Código e Laboratório
+
+### 📂 Repositório do Laboratório
+Para acessar o código completo, documentação e recursos deste laboratório, visite:
+
+**[🔗 Laboratório 01: Chatbot LangChain](https://github.com/kallebelins/ai-labs/tree/main/labs/01_chatbot_langchain)**
+
+### 📋 O que você encontrará no repositório:
+- ✅ **Código fonte completo** em `src/`
+- ✅ **Scripts de execução** em `scripts/`
+- ✅ **Documentação detalhada** em `README.md`
+- ✅ **Arquivos de configuração** (`requirements.txt`, `.env`)
+- ✅ **Logs de exemplo** em `logs/`
+- ✅ **Métricas e relatórios** em `metrics/`
+- ✅ **Dados de teste** em `input/`
+
+### 🚀 Como começar:
+1. Clone o repositório: `git clone https://github.com/kallebelins/ai-labs.git`
+2. Navegue até o laboratório: `cd labs/01_chatbot_langchain`
+3. Siga as instruções no `README.md` para configuração
+4. Execute os scripts e experimente o chatbot!
+
+### 📊 Reproduzindo os Resultados:
+Todos os resultados apresentados neste artigo podem ser reproduzidos seguindo as instruções do laboratório. Os logs e métricas estão disponíveis para análise e validação. 
