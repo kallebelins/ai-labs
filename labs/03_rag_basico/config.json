@@ -1,0 +1,18 @@
+{
+  "model_name": "gpt-4o-mini-2024-07-18",
+  "temperature": 0.2,
+  "max_tokens": 2000,
+  "chunk_size": 250,
+  "chunk_overlap": 150,
+  "vectorstore_search_k": 8,
+  "context_recall_threshold": 0.5,
+  "precision_threshold": 0.65,
+  "similarity_threshold": 0.1,
+  "test_mode": false,
+  "log_level": "INFO",
+  "use_hybrid_search": true,
+  "use_semantic_reranking": true,
+  "use_query_expansion": false,
+  "expansion_count": 3,
+  "embedding_cache_enabled": true
+}

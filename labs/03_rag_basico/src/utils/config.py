@@ -1,6 +1,16 @@
 #!/usr/bin/env python3
 """
-Configurações do sistema RAG básico
+Configurações do sistema RAG avançado.
+
+Este módulo gerencia todas as configurações do sistema RAG, incluindo:
+- Configurações da API OpenAI
+- Parâmetros de chunking e busca
+- Configurações de métricas e avaliação
+- Configurações de logging e relatórios
+- Modo de teste para desenvolvimento
+
+Author: AI Labs
+Version: 2.0.0
 """
 
 import os
@@ -14,10 +24,18 @@ load_dotenv()
 
 def load_config() -> Dict[str, Any]:
     """
-    Carrega configurações do sistema RAG
+    Carrega configurações do sistema RAG avançado.
+    
+    Esta função carrega configurações de múltiplas fontes:
+    1. Variáveis de ambiente (.env)
+    2. Arquivo de configuração personalizado (config.json)
+    3. Valores padrão para desenvolvimento
     
     Returns:
-        Dict com as configurações
+        Dict[str, Any]: Configurações do sistema
+        
+    Raises:
+        ValueError: Se OPENAI_API_KEY não for encontrada em modo não-teste
     """
     config = {
         "openai_api_key": os.getenv("OPENAI_API_KEY"),
@@ -76,11 +94,14 @@ def load_config() -> Dict[str, Any]:
 
 def save_config(config: Dict[str, Any], filename: str = "config.json"):
     """
-    Salva configurações em arquivo
+    Salva configurações em arquivo JSON.
     
     Args:
-        config: Configurações para salvar
-        filename: Nome do arquivo
+        config: Configurações do sistema para salvar
+        filename: Nome do arquivo de saída (padrão: config.json)
+        
+    Raises:
+        Exception: Se houver erro ao salvar o arquivo
     """
     try:
         with open(filename, "w", encoding="utf-8") as f:
@@ -90,10 +111,14 @@ def save_config(config: Dict[str, Any], filename: str = "config.json"):
 
 def get_test_config() -> Dict[str, Any]:
     """
-    Retorna configuração para modo de teste
+    Retorna configuração para modo de teste.
+    
+    Esta função cria uma configuração específica para testes,
+    desabilitando a necessidade de API keys reais e ativando
+    o modo de teste do sistema.
     
     Returns:
-        Dict com configurações de teste
+        Dict[str, Any]: Configurações de teste do sistema
     """
     config = load_config()
     config["test_mode"] = True
