@@ -1,4 +1,5 @@
 # 🔬 Laboratório de Soluções e Estudos em Inteligência Artificial
+> 🗃️ Arquivado: Este projeto foi arquivado com o propósito de habilitar soluções em grafo no ecossistema .NET. Seu conteúdo permanece disponível como referência técnica e educacional.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Python Version](https://img.shields.io/badge/python-3.10+-brightgreen.svg)
